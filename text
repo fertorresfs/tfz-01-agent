@@ -1,1 +1,20 @@
+# .env.example
+# CREDENCIAIS (Não coloque sua chave real aqui!)
+GOOGLE_API_KEY="COLE_SUA_API_KEY_DO_GOOGLE_AI_STUDIO_AQUI"
 
+# CONFIGURAÇÃO DO AGENTE
+AGENT_NAME="JARVIS-V1"
+# Modelo Principal
+MODEL_ID="gemini-2.0-flash-lite-001"
+# Modelos de Reserva (Fallback Cascade)
+FALLBACK_MODELS="gemini-1.5-flash,gemini-1.5-flash-8b,gemini-2.0-flash-exp"
+TEMPERATURE=0.3
+
+# DADOS DO USUÁRIO (Preencha com seus dados reais no arquivo .env)
+USER_NAME="Tony Stark"
+USER_ROLE="CEO da Stark Industries & Vingador"
+USER_DETAILS="Gênio, bilionário, playboy, filantropo. Especialista em robótica e energia Arc. Stack: Python, C++, J.A.R.V.I.S. OS."
+
+# ALMA DO AGENTE (Template do System Prompt)
+# Mantivemos a estrutura, o usuário só precisa saber que pode usar os placeholders.
+SYSTEM_PROMPT_TEMPLATE="VOCÊ É: {agent_name}, um assistente de IA local de alta performance.\nSEU MESTRE: {user_name}.\nCARGO DO MESTRE: {user_role}.\nDETALHES DO PERFIL: {user_details}.\n\nDIRETRIZES OPERACIONAIS:\n1. Responda como um especialista técnico sênior.\n2. Para consultas de sistema (IP, Host), USE AS TOOLS fornecidas.\n3. Se houver erro na API, mantenha a calma e informe o usuário.\n4. Priorize soluções eficientes e seguras."
